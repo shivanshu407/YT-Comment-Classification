@@ -1,72 +1,65 @@
-# **YouTube Comments Sentiment Analysis**
+# YouTube Comment Classification
 
-## 📌 **Project Overview**
-This project analyzes YouTube comments using machine learning models to determine sentiment polarity (positive, negative, or neutral). It leverages Natural Language Processing (NLP) techniques to classify and gain insights from user interactions on videos.
+## Overview
+This project focuses on classifying YouTube comments into different categories using machine learning techniques. The model was trained using natural language processing (NLP) techniques to analyze and categorize comments efficiently.
 
-## 🛠 **Tech Stack & Libraries**
-- **Programming Language:** Python
-- **Libraries:**
-  - `pandas` – Data preprocessing
-  - `scikit-learn` – Machine learning model training
-  - `NLTK` – Text preprocessing and sentiment analysis
-  - `matplotlib` & `seaborn` – Data visualization
+## Features
+- Preprocessing of YouTube comments
+- Feature extraction using NLP techniques
+- Machine learning model for classification
+- Performance evaluation and visualization
 
-## 🚀 **Project Setup**
-1. **Clone the Repository**
+## Dataset
+The dataset consists of YouTube comments labeled according to predefined categories. Data preprocessing involved:
+- Tokenization
+- Stopword removal
+- Lemmatization
+- TF-IDF vectorization
+
+## Technologies Used
+- **Programming Language**: Python
+- **Libraries and Frameworks**:
+  - Scikit-Learn
+  - NLTK
+  - Pandas
+  - NumPy
+  - Matplotlib
+  - Seaborn
+
+## Model Training
+The model was trained using various machine learning algorithms, including:
+- Logistic Regression
+- Random Forest Classifier
+- Support Vector Machine (SVM)
+- Naïve Bayes
+
+## Results
+The best-performing model was evaluated based on accuracy, precision, recall, and F1-score. The detailed results are documented in the `Results.pdf` file included in this repository.
+
+## Installation
+To run the project locally, follow these steps:
+1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/YouTube-Sentiment-Analysis.git
-   cd YouTube-Sentiment-Analysis
+   git clone https://github.com/ShivanshuMishra/YouTube-Comment-Classification.git
+   cd YouTube-Comment-Classification
    ```
-2. **Create a Virtual Environment (Optional but Recommended)**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use 'venv\Scripts\activate'
-   ```
-3. **Install Dependencies**
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
+3. Run the Jupyter Notebook to preprocess data and train the model:
+   ```bash
+   jupyter notebook YT_Comment_Classification.ipynb
+   ```
 
-## 📊 **Dataset**
-- The dataset consists of YouTube comments scraped from various videos.
-- Each comment is labeled as **Positive**, **Negative**, or **Neutral** based on its sentiment.
-- You can use public datasets or scrape YouTube comments using `youtube-comment-downloader`.
+## Usage
+- Modify the dataset or preprocessing steps as needed.
+- Train and test different models for performance comparison.
+- Use the trained model to classify new YouTube comments.
 
-## 🔍 **How It Works**
-1. **Data Cleaning & Preprocessing**
-   - Removing special characters, stopwords, and converting text to lowercase.
-   - Tokenization and Lemmatization using NLTK.
-2. **Feature Engineering**
-   - Converting text to numerical format using TF-IDF Vectorizer.
-3. **Model Training & Evaluation**
-   - Training ML models (Logistic Regression, Random Forest, SVM, etc.).
-   - Evaluating accuracy, precision, recall, and F1-score.
+## Author
+This project was developed by **Shivanshu Mishra**.
 
-## 🏆 **Results & Insights**
-- The model achieves **X% accuracy** on test data.
-- Most frequent words in positive/negative comments are visualized using **word clouds**.
-- The best-performing model is **[model name]**, with an accuracy of **X%**.
+## License
+This project is open-source and available under the MIT License.
 
-## 📜 **Usage**
-- **Run the sentiment analysis on a dataset**
-  ```bash
-  python sentiment_analysis.py --input data/comments.csv
-  ```
-- **Train a new model**
-  ```bash
-  python train_model.py --model logistic_regression
-  ```
-
-## 🛠 **Future Improvements**
-- Implement **Deep Learning** models (LSTM, BERT) for better accuracy.
-- Add **Multilingual Support** for analyzing comments in different languages.
-- Improve data collection using **real-time YouTube API**.
-
-## 🤝 **Contributing**
-Feel free to fork this repository and contribute improvements via pull requests. Suggestions are always welcome!
-
-## 📜 **License**
-This project is licensed under the **MIT License**.
-
----
-📌 **Developed by [Your Name]**
